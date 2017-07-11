@@ -45,5 +45,7 @@ Vagrant.configure(2) do |config|
   config.vm.provision "shell", inline: <<-SHELL
      sudo apt-get install -y build-essential ruby ruby-dev
      sudo gem install jekyll bundler
+     cd /opt/website
+     sudo bundle install
   SHELL
 end
