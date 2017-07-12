@@ -39,7 +39,7 @@ pre code.hljs {
 }
 
 .page-divider {
-	$divider-color: $light-gray;
+  $divider-color: $light-gray;
   display: block;
   width: 50%;
   margin-left: auto;
@@ -85,12 +85,13 @@ pre code.hljs {
 		}
 	}
 	.scrim {
-		padding: 3em 1em;
+		padding: 3em 0;
+        position: relative;
 		&.has-cover {
 			background-color: rgba(0,0,0,0.2);
-			padding: 6em 1em !important;
+			padding: 4em 0 !important;
 			@include media($tablet) {
-				padding: 9em 1em !important;
+				padding: 6em 0 !important;
 			}
 		}
 	}
@@ -101,8 +102,7 @@ pre code.hljs {
 */
 .navigation {
 	box-shadow: 0 2px $highlight-color;
-	padding: 0 1em;
-	margin: 0;
+    width: 100%;
 	/*
 	*	Navigation Menu - http://refills.bourbon.io/unstyled/ (see "Navigation")
 	*/
@@ -121,13 +121,16 @@ pre code.hljs {
   .navigation-wrapper {
   	@include outer-container;
     @include clearfix;
-    position: relative;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-width: 100%;
   }
   .logo {
     float: left;
     height: 4em;
     @include media ($tablet) {
-    	padding-left: $em-base;
+	  padding-left: $em-base;
     }
     img {
       max-height: 2.5em;
@@ -135,16 +138,14 @@ pre code.hljs {
       padding-right: 1em;
     }
     span {
-    	font-size: 1.25em;
+	  font-size: 1.25em;
     }
   }
   nav {
     float: none;
     padding: 1.25em 0;
-    @include media ($tablet) {
-      float: right;
-      line-height: 1.5em;
-    }
+    line-height: 1.5em;
+    
   }
   ul.navigation-menu {
     clear: both;
@@ -152,12 +153,10 @@ pre code.hljs {
     margin: 0 auto;
     overflow: visible;
     padding: 0;
-    width: 100%;
-    @include media ($tablet) {
-      display: block;
-      margin: 0;
-      padding: 0;
-    }
+    width: 100%;   
+    display: block;
+    margin: 0;
+    padding: 0;   
     &.show {
       display: block;
     }
@@ -167,25 +166,22 @@ pre code.hljs {
     display: block;
     text-align: right;
     width: 100%;
-    padding: 0.25em 0;
-    @include media ($tablet) {
-      background: transparent;
-      display: inline;
-      text-decoration: none;
-      width: auto;
-    }
+    padding: 5px 6px;
+    
+    background: transparent;
+    display: inline;
+    text-decoration: none;
+    width: auto;
+    
   }
   li.nav-link {
   	a {
+        color: #ffffff;
 	    display: inline-block;
-	    @include media ($tablet) {
-	      padding-right: 1.5em;
-	    }
+	    
 	  }
 	  &:last-child a {
-	  	@include media ($tablet) {
-    		padding-right: 1em;
-    	}
+	  	
     }
   }
 }
