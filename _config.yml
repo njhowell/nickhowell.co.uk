@@ -21,7 +21,7 @@ description: >
 # and never end with a slash. Set it to a blank value if hosting at the
 # root of your server.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://nickhowell.co.uk" # the base hostname & protocol for your site
+url: "https://nickhowell.co.uk" # the base hostname & protocol for your site
 cover: "/assets/nyc_header-min.jpg"
 logo: 
 
@@ -186,3 +186,5 @@ protocols:
     os_repo: "https://github.com/njhowell/nickhowell.co.uk"
     os_rcs_type: "git"
     os_src: "git@github.com:njhowell/nickhowell.co.uk.git"
+
+disqus_shortname: "nickhowellcouk"
