@@ -23,7 +23,7 @@ description: >
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://nickhowell.co.uk" # the base hostname & protocol for your site
 cover: "/assets/nyc_header-min.jpg"
-logo: 
+logo:  "/assets/icon.png"
 
 # Build settings
 markdown: kramdown
