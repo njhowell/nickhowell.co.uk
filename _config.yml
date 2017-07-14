@@ -114,4 +114,4 @@ protocols:
     os_rcs_type: "git"
     os_src: "git@github.com:njhowell/nickhowell.co.uk.git"
 
-#disqus_shortname: "nickhowellcouk"
+disqus_shortname: "nickhowellcouk"
