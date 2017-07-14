@@ -16,10 +16,10 @@ node {
 
     stage('Build')
     {
-        sh 'su jenkins'
         sh 'bundle exec jekyll build'
         archive '_site/**'
         stash includes: '_site/**', name: 'built-site'
+        deleteDir()
     }    
   }
 }
@@ -31,7 +31,7 @@ if (currentBuild.result == 'UNSTABLE') {
     stage('Deploy')
     {
         node() {
-            deleteDir()
+            
             unstash 'built-site'
         }
     }
