@@ -123,9 +123,9 @@ layout: default
     var disqus_config = function () {
         this.page.url = "{{ page.url | prepend: site.baseurl | prepend: site.url }}";  // Replace PAGE_URL with your page's canonical URL variable
         {% if page.disqus_id %}
-            this.page.identifier = "{{ page.disqus_id }}"
+            this.page.identifier = "{{ page.disqus_id }}";
         {% else %}
-            this.page.identifier  = "{{ page.id }}";
+            this.page.identifier  = "{{ page.id }}";;
         {% endif %}
     };
     
