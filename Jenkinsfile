@@ -32,6 +32,9 @@ if (currentBuild.result == 'UNSTABLE') {
         node() {
             deleteDir()
             unstash 'built-site'
+            sshagent(['nick']) {
+                sh 'scp -r ./ web2.nickhowell.co.uk:~/'
+            }
         }
     }
   
