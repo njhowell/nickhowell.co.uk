@@ -33,7 +33,7 @@ if (currentBuild.result == 'UNSTABLE') {
             deleteDir()
             unstash 'built-site'
             sshagent(['webdeploy']) {
-                sh 'scp -o StrictHostKeyChecking=no -r ./_site/* webdeploy@web2.nickhowell.co.uk:/opt/nickhowell.co.uk/'
+                sh 'rsync -avz --delete -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" --progress ./_site/ webdeploy@web2.nickhowell.co.uk:/opt/nickhowell.co.uk/'
             }
         }
     }
