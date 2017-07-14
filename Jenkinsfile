@@ -5,7 +5,7 @@ node {
   checkout scm
 
   def buildEnv = docker.build 'nickhowellcouk-node'
-  buildEnv.inside('-u root') {
+  buildEnv.inside('-u jenkins') {
     stage 'D/L dependencies'
     sh 'bundle install'
 
