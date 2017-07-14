@@ -32,8 +32,8 @@ if (currentBuild.result == 'UNSTABLE') {
         node() {
             deleteDir()
             unstash 'built-site'
-            sshagent(['nick']) {
-                sh 'scp -o StrictHostKeyChecking=no -r ./ nick@web2.nickhowell.co.uk:~/'
+            sshagent(['webdeploy']) {
+                sh 'scp -o StrictHostKeyChecking=no -r ./_site/* webdeploy@web2.nickhowell.co.uk:/opt/nickhowell.co.uk/'
             }
         }
     }
