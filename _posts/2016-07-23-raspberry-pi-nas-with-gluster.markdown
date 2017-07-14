@@ -3,6 +3,7 @@ layout: post
 title: Raspberry Pi NAS With Gluster
 date: 2016-07-23
 author: Nick Howell
+disqus_id: 16
 ---
 I was having a moan about my NAS (a Western Digital My Cloud) the other day and thought that I could build a better one using a Raspberry Pi. 
 
