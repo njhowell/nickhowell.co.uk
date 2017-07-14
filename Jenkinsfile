@@ -1,4 +1,4 @@
-node('docker') {
+node {
   deleteDir()
 
   stage 'Checkout'
