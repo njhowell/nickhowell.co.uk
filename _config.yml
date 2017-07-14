@@ -7,6 +7,13 @@ plugins:
 
 exclude:
   - "/vendor/"
+  - "Dockerfile"
+  - "Jenkinsfile"
+  - "Vagrantfile"
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "nickhowell.co.uk.sublime-project"
+  
 
 # Site settings
 title: Nick Howell
