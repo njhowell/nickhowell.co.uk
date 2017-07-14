@@ -7,10 +7,10 @@ node {
   }
   
   def buildEnv = docker.build 'nickhowellcouk-node'
-  buildEnv.inside('-u root') {
+  buildEnv.inside {
     stage('D/L dependencies')
     {
-        sh 'bundle install'
+        sh 'bundle install --path /tmp/.gem/'
     }
     
 
@@ -18,8 +18,7 @@ node {
     {
         sh 'bundle exec jekyll build'
         archive '_site/**'
-        stash includes: '_site/**', name: 'built-site'
-        deleteDir()
+        stash includes: '_site/**', name: 'built-site'        
     }    
   }
 }
@@ -31,7 +30,7 @@ if (currentBuild.result == 'UNSTABLE') {
     stage('Deploy')
     {
         node() {
-            
+            deleteDir()
             unstash 'built-site'
         }
     }
