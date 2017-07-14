@@ -3,6 +3,7 @@ layout: post
 title: Hyper-V VM loses network connectivity
 date: 2016-07-12
 author: Nick Howell
+disqus_id: 13
 ---
 I have an interesting problem at the moment where a selection of our VMs will stop passing network traffic. It doesn't seem to be a flat out disconnect, rather it behaves more like the virtual switch is just *dropping packets* instead of forwarding them on like a good switch should.
 

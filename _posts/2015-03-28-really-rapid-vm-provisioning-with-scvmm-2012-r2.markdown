@@ -3,6 +3,7 @@ layout: post
 title: "(Really) Rapid VM Provisioning with SCVMM 2012 R2"
 date: 2015-03-28
 author: Nick Howell
+disqus_id: 8
 ---
 One of the biggest problems I've found with using Microsoft System Center Virtual Machine Manager (SCVMM) and Hyper-V is that deploying a VM from a template can take a really long time (15 minutes in my case).
 

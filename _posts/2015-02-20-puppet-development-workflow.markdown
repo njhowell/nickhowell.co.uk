@@ -3,6 +3,7 @@ layout: post
 title: Puppet development workflow
 date: 2015-02-20
 author: Nick Howell
+disqus_id: 7
 ---
 I've been working with [puppet](http://puppetlabs.com) at [Red Gate](http://www.red-gate.com/) for a while now. Up until recently our code base has been fairly small -- it was more of a trial than anything, but it has slowly proven itself and now nearly all new services are provisioned using puppet if it makes sense to. 
 

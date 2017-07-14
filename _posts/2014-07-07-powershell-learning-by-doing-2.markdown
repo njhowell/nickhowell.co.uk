@@ -3,6 +3,7 @@ layout: post
 title: 'Powershell: Learning by doing #2'
 date: 2014-07-07
 author: Nick Howell
+disqus_id: 6
 ---
 #### Who needs psexec? We've got powershell...   
 

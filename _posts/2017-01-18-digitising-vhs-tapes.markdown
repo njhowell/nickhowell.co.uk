@@ -3,6 +3,7 @@ layout: post
 title: Digitising VHS Tapes
 date: 2017-01-18
 author: Nick Howell
+disqus_id: 17
 ---
 As I'm sure many people do, we have a huge stack of old VHS tapes and a VHS player that I really don't want sat under my TV any more. On the other hand, I do have a Roku sitting there, and Plex Media Server set up on my LAN so I formed a cunning plan: I would digitise all our VHS tapes and store the resulting files in Plex so we could watch them on any TV in the house whenever we wanted.
 

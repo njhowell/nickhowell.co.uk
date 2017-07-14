@@ -3,6 +3,7 @@ layout: post
 title: Unable to edit boot images after upgrade to SCCM R2 SP1
 date: 2015-12-07
 author: Nick Howell
+disqus_id: 10
 ---
 
 After upgrading to SP1 for SCCM 2012 R2 I found I could no longer edit my boot images.

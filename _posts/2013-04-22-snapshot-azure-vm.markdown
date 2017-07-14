@@ -3,6 +3,7 @@ layout: post
 title: Snapshot and Restore Azure VM with PowerShell
 date: 2013-04-22
 author: Nick Howell
+disqus_id: 4
 ---
 ### Problem
 

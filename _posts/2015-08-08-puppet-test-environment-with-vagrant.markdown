@@ -3,6 +3,7 @@ layout: post
 title: Puppet test environment with Vagrant
 date: 2015-08-08
 author: Nick Howell
+disqus_id: 9
 ---
 I wrote a post a little while ago about my [Puppet development workflow](https://nickhowell.co.uk/2015/02/20/puppet-development-workflow/) where I talked about using source control for your manifests and a CI server (Jenkins in that case) to automatically check your code and deploy it to your puppet master. 
 
