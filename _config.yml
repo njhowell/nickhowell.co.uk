@@ -13,7 +13,8 @@ exclude:
   - "Gemfile"
   - "Gemfile.lock"
   - "nickhowell.co.uk.sublime-project"
-  
+  - "README.md"
+
 
 # Site settings
 title: Nick Howell
