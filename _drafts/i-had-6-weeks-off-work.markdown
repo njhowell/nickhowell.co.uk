@@ -12,6 +12,9 @@ Things what i done:
 * Shelves in Garage (and tidied it!)
 * Shelves under stairs
 * New curtain pole in bedroom
-* Move server into loft (in progress)
+* Move server into loft
 * Migrate from ESXi to XenServer for server (plus repurpose spare PC as an extra server)
 * Setup new website using Jekyll and Jenkins for build
+* replace pond pump
+* paint hall, stairs and landing
+
