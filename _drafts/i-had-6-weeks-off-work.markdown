@@ -15,6 +15,8 @@ Things what i done:
 * Move server into loft
 * Migrate from ESXi to XenServer for server (plus repurpose spare PC as an extra server)
 * Setup new website using Jekyll and Jenkins for build
-* replace pond pump
-* paint hall, stairs and landing
+* Finish recording VHS tapes, and started on DVDs/BluRays
+* Replace pond pump
+* Paint hall, stairs and landing
+* Make a home dashboard using an old monitor and a Raspberry Pi
 
