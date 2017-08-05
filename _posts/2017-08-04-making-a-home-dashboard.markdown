@@ -32,6 +32,12 @@ and replace `<url>` with your Dakboard URL.
 
 Note that the location of that file seems to change between versions of raspbian, this is where it was on the latest version as of August 2017. 
 
+You may also want to install unclutter which will hide the mouse pointer for you by running `apt-get install unclutter`. You'll then need to add the following to the `autostart` file:
+
+```
+@unclutter -display :0 -noevents -grab
+```
+
 If you haven't already, you may also need to set Raspbian to auto login which you can do in the raspi-config program.
 
 One last thing I added was automatically switching the display off. I didn't want it lighting up my hall all night, so I created two cron jobs to switch the display on and off.
@@ -44,6 +50,9 @@ I put those commands into the crontab file for the root user, and had the screen
 * 8 * * * /usr/bin/tvservice -p
 * 22 * * * /usr/bin/tvservice -o
 ```
+
+
+To test that it all works, reboot your system and it *should* start up, auto login, and display your webpage.
 
 
 # Hardware
@@ -106,3 +115,15 @@ Now, the moment of truth. Would it work. I powered it up and waited patiently fo
 It worked!
 
 All that's left now, is to paint it and attach it to the wall.
+
+# Update 2017-08-05:
+
+I've painted the frame, and hung it on the wall now. Here are a few more photos of it in action. You may also spot my method of handing it -- some wire between two loops on the inside of either edge. That then hooks on to two giant picture hooks on the wall.
+
+![](/assets/images/2017/dashboard/painted_frame.jpg)
+
+![](/assets/images/2017/dashboard/rear_complete.jpg)
+
+![](/assets/images/2017/dashboard/complete_off.jpg)
+
+![](/assets/images/2017/dashboard/on_wall_working_blurred.jpg)
