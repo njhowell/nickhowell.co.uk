@@ -116,9 +116,9 @@ It worked!
 
 All that's left now, is to paint it and attach it to the wall.
 
-# Update 2017-08-05:
+### Update 2017-08-05:
 
-I've painted the frame, and hung it on the wall now. Here are a few more photos of it in action. You may also spot my method of handing it -- some wire between two loops on the inside of either edge. That then hooks on to two giant picture hooks on the wall.
+I've painted the frame, and hung it on the wall now. Here are a few more photos of it in action. You may also spot my method of hanging it -- some wire between two loops on the inside of either edge. That then hooks on to two giant picture hooks on the wall.
 
 ![](/assets/images/2017/dashboard/painted_frame.jpg)
 
