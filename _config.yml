@@ -29,7 +29,7 @@ description: >
 # and never end with a slash. Set it to a blank value if hosting at the
 # root of your server.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "https://nickhowell.co.uk" # the base hostname & protocol for your site
+url: "https://nickhowell.uk" # the base hostname & protocol for your site
 cover: "/assets/nyc_header-min.jpg"
 logo:  "/assets/icon.png"
 
@@ -108,7 +108,7 @@ social:
 # These are for automatically generating sharing metadata for FB and Twitter
 # OS Protocol is for sharing the source of your site, if you're interested. For more, see osprotocol.com
 protocols:
-    twitter_image: "/assets/logo.png"
+    twitter_image: "/assets/nyc_header-min.jpg"
 
     os_repo: "https://github.com/njhowell/nickhowell.co.uk"
     os_rcs_type: "git"

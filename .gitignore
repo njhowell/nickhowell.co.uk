@@ -1,6 +1,7 @@
 _site/
 .sass-cache/
 .jekyll-metadata
+.jekyll-cache
 .vagrant
 .bundle/
 ubuntu-xenial-16.04-cloudimg-console.log
