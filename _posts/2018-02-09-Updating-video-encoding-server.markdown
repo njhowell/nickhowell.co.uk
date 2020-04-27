@@ -3,9 +3,10 @@ title: Updating my video encoding server
 layout: post
 date: 2018-02-09
 author: Nick Howell
+excerpt_separator: <!--more-->
 ---
 A while back I started a process to convert VHS tapes to digital videos and part of that involved transcoding the mpg files that were captured to slightly more reasonable h264 mp4 files.
-
+<!--more-->
 Mostly because I wanted to learn, I completely over-engineered the solution and instead of just using Handbrake, I set about create an encoding farm involving a NAS, a RabbitMQ message bus, and a couple docker containers to actually do the encoding work.
 
 This worked pretty well, but there were still a few flaws that I mentioned in [my post at the time]({{ site.baseurl }}{% post_url 2017-01-18-digitising-vhs-tapes %}).
