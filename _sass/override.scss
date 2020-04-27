@@ -1,0 +1,9 @@
+.call-out-override {
+    padding: 3% 5%;
+    @media (min-width: 2000px) {
+      padding: 5% 5%;
+    }
+    @media (max-width: 576px) {
+      padding: 5%;
+    }
+}
