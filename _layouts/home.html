@@ -8,6 +8,7 @@ layout: default
        style="background-image: url('{{ site.header_feature_image | relative_url }}')">
     <h1> {{ site.header_text | default: "Change <code>header_text</code> in <code>_config.yml</code>"}} </h1>
   </div>
+  {% if paginator.page == 1 %}
   <article>
     <section class="post-content">
         My name is Nick Howell. I'm a Systems Administrator for <a href='https://www.red-gate.com'>Redgate</a>. Most of my time at work is spent on virtualisation (Vmware and Openstack), 
@@ -20,7 +21,7 @@ layout: default
         This site is a plce for me to share some things I've learnt, or otherwise found interesting.
     </section>      
   </article>
-
+  {% endif %}
   {% include blog.html %}
     
 </div>
