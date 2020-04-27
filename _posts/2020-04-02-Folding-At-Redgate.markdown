@@ -3,12 +3,15 @@ title: Folding@Redgate
 layout: post
 date: 2020-04-02
 author: Nick Howell
+feature-img: "assets/images/2020/03/coronavirus.jpg"
+thumbnail: "assets/images/2020/03/coronavirus.jpg"
+excerpt_separator: <!--more-->
 ---
-![](/assets/images/2020/03/coronavirus.jpg)
 
 It's fair to say that coronavirus has had a huge impact on our day-to-day lives. Many organisations have really stepped up and are putting huge amounts of effort into helping the world deal with it. 
 
 One small thing I saw several references to, though, was the [Folding@Home](https://foldingathome.org/) project. It's something I had contributed to before, but had largely forgotten was a thing. It's main purpose is to simulate protein folding with the goal of using that information to allow medical researchers to develop vaccines and other treatments for various illnesses. 
+<!--more-->
 
 Unsurprisingly, they started providing work units for [Covid-19 research](https://foldingathome.org/covid19/) and calling on people to donate computing power. 
 

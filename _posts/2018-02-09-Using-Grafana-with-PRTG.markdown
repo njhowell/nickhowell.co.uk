@@ -3,11 +3,14 @@ title: Using Grafana with PRTG
 layout: post
 date: 2018-02-09
 author: Nick Howell
+color: brown
+thumbnail: "assets/images/2018/grafana/plex-min.jpg"
+excerpt_separator: <!--more-->
 ---
 I've been using [PRTG](https://www.paessler.com/prtg) at work for a long time now, and recently started using the free tier at home for my own projects.
 
 It works really well, but one of the things I found quite lacking was it's ability to create dashboards. Sure, you have maps but there's only so much you can do there, and they just don't look all that good.
-
+<!--more-->
 Then I found [this blog post](https://blog.paessler.com/prtg-plus-grafana-ftw) on the PRTG blog about someone having written a PRTG data source provider for [Grafana](https://grafana.com/). Grafana is excellent a creating dashboards and drawing graphs, and what's more, the end result looks good.
 
 I set about giving it a try, and the results are pretty good so far.

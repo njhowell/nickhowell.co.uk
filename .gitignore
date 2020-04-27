@@ -1,9 +1,6 @@
-_site/
-.sass-cache/
-.jekyll-metadata
+_site
+.sass-cache
 .jekyll-cache
-.vagrant
-.bundle/
-ubuntu-xenial-16.04-cloudimg-console.log
-
-nickhowell\.co\.uk\.sublime-workspace
+.jekyll-metadata
+vendor
+.bundle
