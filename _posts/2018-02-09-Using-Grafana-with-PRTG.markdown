@@ -3,6 +3,8 @@ title: Using Grafana with PRTG
 layout: post
 date: 2018-02-09
 author: Nick Howell
+color: brown
+thumbnail: "assets/images/2018/grafana/plex-min.jpg"
 ---
 I've been using [PRTG](https://www.paessler.com/prtg) at work for a long time now, and recently started using the free tier at home for my own projects.
 
