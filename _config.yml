@@ -59,6 +59,11 @@ excerpt: true
 color_image: "/assets/img/lineart.png"
 permalink: pretty
 
+collections:
+    projects:
+      output: true
+      permalink: /:collection/:name
+
 exclude:
     - "/vendor/"
     - "Vagrantfile"
