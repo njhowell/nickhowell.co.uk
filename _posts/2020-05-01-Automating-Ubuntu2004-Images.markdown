@@ -11,9 +11,9 @@ tags: [ubuntu,openstack,packer]
 [Ubuntu 20.04](https://ubuntu.com/blog/ubuntu-20-04-lts-arrives){:target="_blank"} was released last week, so I set about creating a new image for our internal virtualisation platform. This post is about how we use [Packer](https://www.packer.io/){:target="_blank"} to automate the creation of images and what we had to do to get it to build Ubuntu 20.04.
 <!--more-->
 
-Packer is a tool from Hashicorp that automates the building of machine images. Natively it supports a huge range of virtualisation options, but for our purpose we use Virtualbox and VMWare Workstation. Our Virtualbox images are used by developers using Vagrant on their local systems, and our VMWare images are used for both Vagrant and our internal Openstack platform (which we use VMWare vCenter / ESXi for the compute resources).
+Packer is a tool from Hashicorp that automates the building of machine images. Natively it supports a huge range of virtualisation options, but for our purpose, we use Virtualbox and VMWare Workstation. Our Virtualbox images are used by developers using Vagrant on their local systems, and our VMWare images are used for both Vagrant and our internal Openstack platform (which we use VMWare vCenter / ESXi for the compute resources).
 
-The Packer [Getting Started](https://www.packer.io/intro/getting-started/){:target="_blank"} guide gives a good overview of how to use it. In a nutshell, a Packer configuration consists of an array of `builders` and, optionally, an array of `provisioners`. `Builders` define how to launch a VM on a particular platform, while the `provisioners` define what scripts to run on that image to prepare it in the way you want. Once those scripts have been run, Packer will shutdown the VM and export it in some way depending on the builder. For example, that may be an AMI for EC2, or a file such as a vmdk for VMWare images. You can have multiple `builders` in a single Packer configuration, which means you can effectively build an identical image for multiple platforms very easily.
+The Packer [Getting Started](https://www.packer.io/intro/getting-started/){:target="_blank"} guide gives a good overview of how to use it. In a nutshell, a Packer configuration consists of an array of `builders` and, optionally, an array of `provisioners`. `Builders` define how to launch a VM on a particular platform, while the `provisioners` define what scripts to run on that image to prepare it in the way you want. Once those scripts have been run, Packer will shut down the VM and export it in some way depending on the builder. For example, that may be an AMI for EC2 or a file such as a vmdk for VMWare images. You can have multiple `builders` in a single Packer configuration, which means you can effectively build an identical image for multiple platforms very easily.
 
 
 ### Building Ubuntu 20.04
@@ -51,7 +51,7 @@ Note that even though each of these entries is a new item in the array in our co
 
 We're using the new [AutoInstall](https://wiki.ubuntu.com/FoundationsTeam/AutomatedServerInstalls){:target="_blank"} method for Ubuntu 20.04. Previous versions use debian-installer preseeding, but that method didn't immediately work with the new ISO. 
 
-Packer will start a small HTTP server when the build is run and substitude the {% raw %} `{{.HTTPIP}}` and `{{.HTTPPort}}` {% endraw %}variables with the corresponding IP and Port. You must also set the `http_directory` configuration option to specify which directory on your filesystem hosts the files you want the HTTP server to serve. We have a directory called `ubuntu-20.04` within that directory, and that in turn contains a `user-data` file which contains our AutoInstall config. I also found that AutoInstall expects a file called `meta-data` to be present, although it doesn't require any content so I simply have an empty file called `meta-data` alongside `user-data`.
+Packer will start a small HTTP server when the build is run and substitute the {% raw %} `{{.HTTPIP}}` and `{{.HTTPPort}}` {% endraw %}variables with the corresponding IP and Port. You must also set the `http_directory` configuration option to specify which directory on your filesystem hosts the files you want the HTTP server to serve. We have a directory called `ubuntu-20.04` within that directory, and that in turn contains a `user-data` file which contains our AutoInstall config. I also found that AutoInstall expects a file called `meta-data` to be present, although it doesn't require any content so I simply have an empty file called `meta-data` alongside `user-data`.
 
 Our `user-data` file looks like this
 
@@ -101,7 +101,7 @@ autoinstall:
 
 Note that the vagrant bits are somewhat unique to us. We create a user called `vagrant` as part of the install. That's so we can use this image as a vagrant box later on. Note also at the end that we add `vagrant` to the sudo config and ensure that it doesn't require a password to run sudo commands. This ensures that when the image is used in vagrant, it doesn't prompt for a password before running a command with root privileges. 
 
-Then we come to the provisioners. For this base image we run two scripts, one to update all the packages, and the other cleans up a few things:
+Then we come to the provisioners. For this base image, we run two scripts, one to update all the packages, and the other cleans up a few things:
 
 ```bash
 sudo apt-get update
@@ -132,4 +132,4 @@ fi
 The interesting thing in the second script is the removal of the `*.cfg` files from `/etc/cloud/cloud.cfg.d/`. Those files get created by AutoInstall and include config that prevents cloud-init from correctly running a second time. Probably not a problem in most cases, but our VMDK images are destined for Openstack which uses cloud-init to configure the instances on boot.
 
 
-Finally, we repeat this style of config many times for different versions of Ubuntu and CentOS, but also for Windows desktop and Windows Server editions. In most cases we build a base image from an ISO, as above, and then build more specialised images using those base images as starting points. Some of our more complicated configurations also use [Puppet as a provisioner](https://www.packer.io/docs/provisioners/puppet-masterless/){:target="_blank"} to install things such as SQL Server, Oracle or Visual Studio to allow our development teams to easily test against those platforms.
+Finally, we repeat this style of config many times for different versions of Ubuntu and CentOS, but also Windows desktop and Windows Server editions. In most cases, we build a base image from an ISO, as above, and then build more specialised images using those base images as starting points. Some of our more complicated configurations also use [Puppet as a provisioner](https://www.packer.io/docs/provisioners/puppet-masterless/){:target="_blank"} to install things such as SQL Server, Oracle or Visual Studio to allow our development teams to easily test against those platforms.
