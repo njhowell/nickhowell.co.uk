@@ -21,7 +21,7 @@ I'm going to talk about a few of the things we do to provision our images, but i
 
 To build our Ubuntu 20.04 image, we start from scratch using the ISO. While it is possible to start from another image, we prefer this method because it gives us total control over what goes in the image.
 
-The most interesting part of this step is configuring the `boot_command`. This is a command that is typed at the install prompt when the ISO boots. Ours looks like this:
+You can see a full example of the Packer file we use [here](https://gist.github.com/njhowell/ce216470d6ed050e5b609244402aa00e#file-ubuntu-2004-json){:target="_blank"}. The most interesting part of this step is configuring the `boot_command`. This is a command that is typed at the install prompt when the ISO boots. Ours looks like this:
 {% raw %}
 ```json
 "boot_command": [
