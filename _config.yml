@@ -33,7 +33,7 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://nickhowell.uk" # the base hostname & protocol for your site
 header_feature_image: "assets/images/nyc-header.jpg"
 header_feature_image_responsive: true
-header_text: "Hi. I'm Nick"
+header_text: " "
 favicon: "assets/icons/favicon.ico"
 
 twitter_username: njhowell
