@@ -23,9 +23,9 @@ subtitle: "Sysadmin stories"
 email: nick@nickhowell.co.uk
 name: Nick Howell
 description: >
-  My name is Nick Howell. I'm a Sysadmin for Redgate in Cambridge, UK mostly
-  working on virtualisation, storage, networking and other vaguely infrastructure
-  things.
+  My name is Nick Howell. I'm the IT Services Lead for Redgate in Cambridge, UK. Mostly I 
+  manage the Service Desk and Sysadmin teams as well as working on virtualisation, 
+  storage, networking and other vaguely infrastructure things.
 # Base URL of site (i.e. /blog). It should always start with a slash,
 # and never end with a slash. Set it to a blank value if hosting at the
 # root of your server.
@@ -34,6 +34,7 @@ url: "https://nickhowell.uk" # the base hostname & protocol for your site
 header_feature_image: "assets/images/nyc-header.jpg"
 header_feature_image_responsive: true
 header_text: "Hi. I'm Nick"
+favicon: "assets/icons/favicon.ico"
 
 twitter_username: njhowell
 github_username:  njhowell
@@ -56,7 +57,7 @@ highlightjs_theme: "monokai-sublime"
 
 excerpt: true
 
-color_image: "/assets/img/lineart.png"
+color_image: "assets/images/lineart.png"
 permalink: pretty
 
 collections:
