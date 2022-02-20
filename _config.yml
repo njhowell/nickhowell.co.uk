@@ -31,23 +31,23 @@ description: >
 # root of your server.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://nickhowell.uk" # the base hostname & protocol for your site
-header_feature_image: "/assets/nyc_header-min.jpg"
+header_feature_image: "assets/images/nyc-header.jpg"
+header_feature_image_responsive: true
 header_text: "Hi. I'm Nick"
 
 twitter_username: njhowell
 github_username:  njhowell
 disqus_shortname: "nickhowellcouk"
 
-
-google_analytics: "UA-4624053-2"
-
 # Build settings
 theme: type-on-strap
-plugins:
-  - jekyll-feed
-  - jekyll-paginate
 
 # Build settings
+
+post_navigation: true
+
+plugins: [jekyll-paginate, jekyll-seo-tag, jekyll-feed]
+
 markdown: kramdown
 paginate: 10
 paginate_path: "/page:num/"
