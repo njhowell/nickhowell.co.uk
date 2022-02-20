@@ -23,9 +23,7 @@ subtitle: "Sysadmin stories"
 email: nick@nickhowell.co.uk
 name: Nick Howell
 description: >
-  My name is Nick Howell. I'm the IT Services Lead for Redgate in Cambridge, UK. Mostly I 
-  manage the Service Desk and Sysadmin teams as well as working on virtualisation, 
-  storage, networking and other vaguely infrastructure things.
+  Personal blog of Nick Howell - Husband, Father and IT Services Lead @ Redgate
 # Base URL of site (i.e. /blog). It should always start with a slash,
 # and never end with a slash. Set it to a blank value if hosting at the
 # root of your server.
